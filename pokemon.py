@@ -22,6 +22,10 @@ class Pokemon:
     self.spa = spa
     self.spd = spd
     self.spe = spe
+    self.move1 = move1
+    self.move2 = move2
+    self.move3 = move3
+    self.move4 = move4
 
 pokemon1 = Pokemon("Mewtwo", "psychic", None, 322, 225, 185, 313, 185, 265)
 pokemon2 = Pokemon("Arceus", "normal", None, 350, 245, 245, 245, 245, 245)
