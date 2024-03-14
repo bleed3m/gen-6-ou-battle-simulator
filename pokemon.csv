@@ -1,5 +1,5 @@
-﻿id,name,type1,type2,hp,atk,def,spa,spd,spe
-1,Excadrill,Ground,Steel,110,135,60,50,65,88
-2,Gliscor,Ground,Flying,75,95,125,45,75,95
-4,Pinsir,Bug,,65,155,120,65,90,105
-3,Zapdos,Electric,Flying,90,90,85,125,90,100
+﻿name,type1,type2,hp,atk,def,spa,spd,spe
+Excadrill,Ground,Steel,110,135,60,50,65,88
+Gliscor,Ground,Flying,75,95,125,45,75,95
+Pinsir,Bug,,65,155,120,65,90,105
+Zapdos,Electric,Flying,90,90,85,125,90,100

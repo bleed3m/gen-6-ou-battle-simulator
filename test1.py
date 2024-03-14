@@ -1,6 +1,6 @@
 import pandas as pd
 import pandasql as ps
-
+'''
 pokemon = pd.read_csv("pokemon.csv")
 pokemon = pokemon.set_index("id")
 # print(pokemon.query("type2 == 'Flying'"))
@@ -26,3 +26,14 @@ print(pokemon.loc[pokemon['type1'] == "Ground"])
  
 # Read a specific location (R, C)
 print(pokemon.iloc[0, 0])
+'''
+
+import csv
+
+with open('pokemon.csv', 'r') as csvfile:
+    csv_reader = csv.reader(csvfile)
+
+    next(csv_reader)
+
+    for line in csv_reader:
+        print(line)
