@@ -81,21 +81,46 @@ def damageRound(damage):
     return damage
 
 def battleManager():
-   while pokemon1.hp > 0 and pokemon2.hp > 0:
-       pokemon1.hp-=1
-       print(pokemon1.hp)
-   return
+    pokemon1currenthp = pokemon1.hp
+    pokemon2currenthp = pokemon2.hp
+
+
+    while pokemon1currenthp > 0 and pokemon2currenthp > 0:
+        
+        print('------------------------------------')
+        print(f"What will {pokemon1.name} do?")
+        choice = input()
+        ichoice = int(choice)
+
+        if ichoice == 1:
+            print(f"{pokemon1.name} used {pokemon1.move1}")
+            damage = damageCalc(pokemon1, pokemon2, 90)
+
+        elif ichoice == 2:
+            print(f"{pokemon1.name} used {pokemon1.move2}")
+            damage = damageCalc(pokemon1, pokemon2, 90)
+
+        elif ichoice == 3:
+            print(f"{pokemon1.name} used {pokemon1.move3}")
+            damage = damageCalc(pokemon1, pokemon2, 90)
+
+        elif ichoice == 4:
+            print(f"{pokemon1.name} used {pokemon1.move4}")
+            damage = damageCalc(pokemon1, pokemon2, 90)
+
+        if damage != 0:
+            print(f'did {damage} damage')
+
+        pokemon2currenthp -= damage
+        if pokemon2currenthp < 0:
+            pokemon2currenthp = 0
+        print(f"{pokemon2.name} {pokemon2currenthp}/{pokemon2.hp}")
+
+    print("finish")
+    return
 
 def main():
-    print('-----------------------------------')
-    pokemon2currenthp = pokemon2.hp
-    print(f'{pokemon1.name} used {pokemon1.move1}')
-    damage = damageCalc(pokemon1, pokemon2, 90)
-    if damage != 0:
-        print(damage)
-    pokemon2currenthp -= damage
-    print(f"{pokemon2.name} {pokemon2currenthp}/{pokemon2.hp}")
-    print('-----------------------------------')
+    
     battleManager()
 
 if __name__ == '__main__':
