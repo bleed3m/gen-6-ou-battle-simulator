@@ -81,6 +81,9 @@ def damageRound(damage):
     return damage
 
 def battleManager():
+   while pokemon1.hp > 0 and pokemon2.hp > 0:
+       pokemon1.hp-=1
+       print(pokemon1.hp)
    return
 
 def main():
@@ -93,6 +96,7 @@ def main():
     pokemon2currenthp -= damage
     print(f"{pokemon2.name} {pokemon2currenthp}/{pokemon2.hp}")
     print('-----------------------------------')
+    battleManager()
 
 if __name__ == '__main__':
     main()
